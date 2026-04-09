@@ -1,0 +1,163 @@
+.layout {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+.layout__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.layout__nav {
+  display: flex;
+  gap: 1.25rem;
+}
+.layout__nav a {
+  font-weight: 500;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.habit-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.habit-group h3 {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.habit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.habit-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'header button'
+    'progress button';
+  gap: 0.4rem 1rem;
+  align-items: center;
+}
+
+.habit-card header {
+  grid-area: header;
+}
+
+.habit-card__description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+
+.habit-card__progress {
+  grid-area: progress;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.habit-card__progress strong {
+  color: var(--text-strong);
+}
+.habit-card__period {
+  margin-left: 0.25rem;
+}
+
+.habit-card__button {
+  grid-area: button;
+  white-space: nowrap;
+}
+
+.stats-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.stats-card header h4 {
+  margin: 0;
+}
+.stats-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+.stats-card__stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.stats-card__stats dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+.stats-card__stats dd {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text-strong);
+}
+.stats-card__unit {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.field label {
+  font-weight: 500;
+  color: var(--text-strong);
+}
+.field__error,
+.form__error {
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.page--add-habit form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.page--add-habit form button[type='submit'] {
+  align-self: flex-start;
+}
